@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mini Calculator</h1>
+    <input type="number" id="inp1" name="num1" placeholder="Enter 1st number" />
+    <input type="number" id="inp2" name="num2" placeholder="Enter 2nd number" />
+    <h1 id="h1">Result:</h1>
+
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+
+<script>
+    function add() {
+        let a = parseInt(document.getElementById("inp1").value);
+        let b = parseInt(document.getElementById("inp2").value);
+        let aans = a + b;
+        document.getElementById("h1").innerHTML = "Result: " + aans;
+        alert(aans)
+    }
+
+    function sub() {
+        let a = parseInt(document.getElementById("inp1").value);
+        let b = parseInt(document.getElementById("inp2").value);
+        let aans = a - b;
+        document.getElementById("h1").innerHTML = "Result: " + aans;
+        alert(aans)
+    }
+
+    function mul() {
+        let a = parseInt(document.getElementById("inp1").value);
+        let b = parseInt(document.getElementById("inp2").value);
+        let aans = a * b;
+        document.getElementById("h1").innerHTML = "Result: " + aans;
+        alert(ans)
+    }
+
+    function div() {
+        let a = parseInt(document.getElementById("inp1").value);
+        let b = parseInt(document.getElementById("inp2").value);
+        let aans = a / b;
+        document.getElementById("h1").innerHTML = "Result: " + aans;
+        alert(ans)
+    }
+</script>
+</body>
+</html>
