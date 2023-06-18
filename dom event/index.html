@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event List</title>
+       <title>Event List</title>
 </head>
-<body>
-    <div class="cont">
-    <button>
-      1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-   </div> 
+<body >
+  <div  class="cont">
+    <h1>head1</h1>
+    <h1>head2</h1>
+    <h1>head3</h1>
+    <h1>head4</h1>
+  </div>
+     
 </body>
 </html>
 <script>
-   let allbtn= document.querySelectorAll(".cont>button")
-   for (let i=0; i<allbtn.length: i++)
-   {
-    allbtn[i].addEventListener("click")
-   }
+  let head=document.querySelectorAll(".cont>h1")
+  for (let i=0;i<head.length;i++)
+    {
+      console.log(head)
+    }   
 </script>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #head{
+            text-align: center;
+            color: purple;
+            background-color: greenyellow;
+            font-size: 50px;
+        }
+        #calculator{
+           
+            height: 500px;
+            width: 400px;
+            box-shadow: 0px 3px 8px 7px rgba(100, 100, 111, 0);
+            margin: auto;
+            padding: 40px;
+            border-radius: 30px;
+        }
+        #display{
+            height:60px;
+            width:100px;
+            box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, 0.35);
+            margin: auto;
+            /* padding: 40px; */
+            border-radius: 30px;
+
+        }
+        #keybord{
+            display: grid;
+            display: flex;
+            grid-template-columns: repeat(4,1f);
+            grid-template-rows: repeat(4,80px);
+            gap: 10px;
+            margin-top:20px
+        }
+
+        #keybord >div {
+            box-shadow: 0px 3px 8px 4px rgb(45,50,28);
+            border-radius:50px;
+            font-size: 30px;
+            /* display:flex;
+            justify-content: center;
+            align-items: center; 
+            width:1000px; */
+         }
+         #keybord > div:hover{
+            background-color: yellowgreen;
+         }
+         .black{
+            background-color: black;
+            color:white
+         }
+         .red{
+            background-color: red;
+            color: whitesmoke;
+         }
+         #display{
+            width:500px;
+            font-size:30px;
+            display:flex;
+             align-items:center;
+             justify-content: center;
+         }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1 id="head">Masai Calculator</h1>
+    <div id = "calculator"> 
+    <div id="display"></div>
+    <div id="keybord">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="black">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="black">-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="black">*</div>
+        <div class="red">C</div>
+        <div>=</div>
+        <div>0</div>
+        <div class="black">/</div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+   let bag="" 
+   let keys=document.querySelectorAll("#keybord>div")
+   for (let i=0; i<keys.length;i++){
+       keys[i].addEventListener("click", function(event){
+        let targetnumber=event.target.innerText
+        
+        if(targetnumber=="="){
+            document.querySelector("#display").innerText=eval(bag)
+        }
+        else if(targetnumber==="C"){
+            bag=" "
+            document.querySelector("#display").innerText="0"
+        }
+        else{
+            bag+=targetnumber
+            document.querySelector("#display").innerText=bag
+        }
+       }
+       ) 
+   }
+   consloe.log(document.getElementById("keybord"))
+</script>
