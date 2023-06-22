@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #timer{
+            display: flex;
+            color: white;
+            background-color: black;
+            justify-content: space-around;
+            font-size: 50px;
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            /* justify-content: center; */
+        }
+        #timer h1{
+            background-color: rgba(145, 255, 0, 0.815);
+            width: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">
+    <h1 id="hour">0</h1>
+    <h2> : </h2>
+    <h1 id="min">0</h1>
+    <h2> : </h2>
+    <h1 id="sec">0</h1>
+    </div>
+</body>
+</html>
+<script>
+    let hours=0;
+    let mins=0;
+    let secs=0;
+    let hE=document.getElementById("hour")
+    let mE=document.getElementById("min")
+    let sE=document.getElementById("sec")
+     setInterval( function(){
+       secs++;
+       if (secs>=60){
+        secs=0;
+        mins++
+        if (mins>=60){
+            mins=0;
+            hours++
+            hE.innerText=hours
+        }
+        mE.innerText=mins
+
+       }
+       sE.innerText=secs
+
+     },1000)
+
+</script>
