@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let isComplete=false;
+    let cass=new Promise(function(resolve,reject){
+        // isComplete=true;
+        if (isComplete==true){
+            resolve("is complete")
+
+        }
+        else{
+            reject("not complete")
+        }
+    })
+ cass.then((function(data){
+    console.log(data)
+ })).catch(function(data1){
+    console.log(data1)
+ })
+</script>

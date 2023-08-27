@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #heading{
+     color: white; 
+     background-color: orange; 
+     width: 500px; 
+     height: 50px;
+     text-align: center;
+     margin: auto;
+     border-radius: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    
+    }
+    #calculator{
+        height: 400px;
+        width: 400px;
+        border-radius: 20px;
+        margin:auto;
+        margin-top: 50px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    }
+    #display{
+        height: 50px;
+        width: 350px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #keybord{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,80px);
+        /* margin:auto; */
+        gap: 5px;
+    }
+    #keybord>div{
+        height: 40px;
+        width: 60px;
+        font-size: 30px;
+        border-radius: 30px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #keybord>div:hover{
+        background-color: orange;
+
+    }
+    .black{
+        background-color: black;
+        color: white;
+    }
+    #ora{
+        background-color: orange;
+    }
+
+
+</style>
+<body>
+    <div id="heading" > Calculator</div>
+    <div id="calculator"> 
+    <div id="display"></div>
+    <div id="keybord">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="black" >+</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div class="black">-</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div class="black">*</div>
+    <div id="ora">C</div>
+    <div>0</div>
+    <div class="black">=</div>
+    <div class="black">/</div>
+    </div>
+    </div>
+</body>
+<script>
+    let bag = "";
+    let keys = document.querySelectorAll("#keybord>div");
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].addEventListener("click", function (event) {
+            let targetNumber = event.target.innerText;
+            if (targetNumber === "=") {
+                document.querySelector("#display").innerText = eval(bag);
+            }
+            else if (targetNumber === "C") {
+                bag = "";
+                document.querySelector("#display").innerText = "0";
+            } 
+            else {
+                bag += targetNumber;
+                document.querySelector("#display").innerText = bag;
+            }
+        }
+        
+        )
+    }
+</script>
+</html>

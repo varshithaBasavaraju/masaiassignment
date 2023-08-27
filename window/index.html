@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1> i am body</h1>    
+     <button onclick="displaywindowobject()">click</button>
+     <div id="output"></div>
+</body>
+</html>
+<script>
+    function displaywindowobject(){
+        var wh=window.innerHeight
+        var ww=window.innerWidth
+        document.getElementById("output").innerHTML=wh
+        document.getElementById("output").innerHTML=ww
+        window.alert("This is an alert from window")
+         var confirmresult=window.confirm("do you like html")
+         document.getElementById("output").innerHTML="confirm result:"+confirmresult
+    }
+</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
