@@ -1,0 +1,57 @@
+#h1{
+    text-align: center;
+    color:black;
+}
+#plat{
+    background-color:yellowgreen;
+    border: 10px solid black;
+    border-radius: 50px;
+}
+
+
+   
+
+#inp{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+    background-color:lavender;
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    margin: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#img{
+    margin-top: 50px;
+    margin-left: 420px;
+    box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+}
+#h2{
+    text-align: center;
+}
+#inp1{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 500px;
+    height: 800px;
+    border-radius: 20px;
+    background-color:lavender;
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 100px;
+    /* display: flex;
+    margin: auto;
+    gap: 20px;
+    justify-content: center;di
+    align-items: center; */
+}#inp1>div>h3{
+    margin-left: 40px;
+    color: rgb(238, 130, 238);
+}
+
+
